@@ -40,7 +40,7 @@
 ### Step 1
 ```sh
 ## 1. clone the repo
-git clone --depth 1 https://github.com/afaqurk/linux-dash.git
+git clone --depth 1 https://github.com/bozjator/linux-dash.git
 
 ## 2. go to the cloned directory
 cd linux-dash/app/server
@@ -50,7 +50,7 @@ OR, if you prefer to download manually:
 
 ```sh
 ## 1. Download the .zip
-curl -LOk https://github.com/afaqurk/linux-dash/archive/master.zip && unzip master.zip
+curl -LOk https://github.com/bozjator/linux-dash/archive/master.zip && unzip master.zip
 
 ## 2. navigate to downloaded & unzipped dir
 cd linux-dash-master/app/server
