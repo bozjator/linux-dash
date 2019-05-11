@@ -425,13 +425,16 @@ pm2_stats() {
 		| $AWK 	'{print "{"}\
 			{print "\"appName\":\"" $2 "\","} \
 			{print "\"id\":\"" $4 "\","} \
-			{print "\"mode\":\"" $6 "\","} \
-			{print "\"pid\":\"" $8 "\","}\
-			{print "\"status\":\"" $10 "\","}\
-			{print "\"restart\":\"" $12 "\","}\
-			{print "\"uptime\":\"" $14 "\","}\
-			{print "\"memory\":\"" $16 $17 "\","}\
-			{print "\"watching\":\"" $19 "\""}\
+			{print "\"version\":\"" $6 "\","} \
+			{print "\"mode\":\"" $8 "\","} \
+			{print "\"pid\":\"" $10 "\","}\
+			{print "\"status\":\"" $12 "\","}\
+			{print "\"restart\":\"" $14 "\","}\
+			{print "\"uptime\":\"" $16 "\","}\
+			{print "\"cpu\":\"" $18 "\","}\
+			{print "\"memory\":\"" $20 $21 "\","}\
+			{print "\"user\":\"" $23 "\","}\
+			{print "\"watching\":\"" $25 "\""}\
 			{print "},"}')
 		#make sure to remove last comma and print in array
 		$ECHO "[" ${json%?} "]" | _parseAndPrint
