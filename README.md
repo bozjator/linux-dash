@@ -71,10 +71,17 @@ See instructions for preferred server linux-dash server _(all included)_:
 ## install dependencies
 npm install --production
 
+## This forked Linux Dash contains simple authentication for NodeJs.
+## Before you start server, you have to generate password.
+## Go to app/server/auth and run the following command, which will save hash of a password into file.
+node pass-generator.js
+
 ## start linux-dash (on port 80 by default; may require sudo)
 ## You may change this with the `LINUX_DASH_SERVER_PORT` environment variable (eg. `LINUX_DASH_SERVER_PORT=8080 node server`)
 ## or provide a --port flag to the command below
 node index.js
+
+## Before you can access Linux Dash you have to login. The form is accessible on /login address.
 
 ```
 

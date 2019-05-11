@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      .container {
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="loginForm" action="" method="post">
+        <input type="password" placeholder="Password" name="password" required>
+      </form>
+    </div>
+    <script>
+      document.forms['loginForm'].addEventListener('submit', (event) => {
+        event.preventDefault();
+        fetch(event.target.action, {
+          method: 'POST',
+          body: new URLSearchParams(new FormData(event.target)) // event.target is the form
+        }).then((resp) => {
+          return resp.json();
+        }).then((body) => {
+          document.cookie = "authToken="+body.token+"; expires="+body.expires; 
+          window.location.replace("/");
+        }).catch((error) => {
+          console.log("Error: " , error);
+        });
+      });
+    </script>
+  </body>
+</html>
