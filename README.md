@@ -29,6 +29,10 @@
 
 <br/>
 
+**The purpose of this forked Linux Dash repo is simple authentication for NodeJs.** See the "If Using Node.js" section.
+
+<br/>
+
 ## Features
 * **Small** ----- Under 400KB on disk _(with .git removed)!_
 * **Simple** ---- A minimalist, beautiful dashboard
